@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from './form.module.css';
 import { connect } from 'react-redux';
-import contactAction from '../../redux/contact/contact-action';
+import { contactOperations } from '../../redux/contact/';
 class Form extends Component {
 	state = { name: '', number: '' };
 
@@ -59,6 +59,6 @@ class Form extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-	onSubmit: contact => dispatch(contactAction.handleForm(contact)),
+	onSubmit: contact => dispatch(contactOperations.handleForm(contact)),
 });
 export default connect(null, mapDispatchToProps)(Form);
