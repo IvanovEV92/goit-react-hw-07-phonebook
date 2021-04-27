@@ -16,7 +16,7 @@ class App extends Component {
 			<section>
 				<h1>Phonebook</h1>
 				<ContactForm />
-
+				{this.props.isLoadingContacts && <h1>Загружаем...</h1>}
 				<h2>Contacts</h2>
 				<Filter />
 				<ContactList />
